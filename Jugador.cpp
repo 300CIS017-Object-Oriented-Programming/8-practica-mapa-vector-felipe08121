@@ -20,13 +20,6 @@ Jugador::Jugador(string nickname, int nivelRanking) {
 
 Jugador::~Jugador(){
 
-    for ( int i = 0; i < videojuegosInscritos.size(); i++) {
-        if (videojuegosInscritos[i] != NULL) {
-            delete videojuegosInscritos[i];
-            videojuegosInscritos[i] = NULL;
-        }
-    }
-
     videojuegosInscritos.clear();
 
 }
@@ -74,8 +67,32 @@ void Jugador::mostrar() {
 
     }
 
-    cout << "------- >_< Promedio de las dificultades de los videojuegos del jugador: " << promedio/contador
-    << " >_< -------"<< endl;
+    if ( contador != 0) {
+        cout << ">_< Promedio de las dificultades de los videojuegos del jugador: " << promedio/contador
+        << " >_<"<< endl;
+    }
+    else {
+        cout << "El jugador aun no tiene un promedio " << endl;
+    }
 
     cout << endl << "========= =============== =========" << endl;
+}
+
+//Metodos adicionales:
+
+void Jugador::agregarVideojuego( Videojuego * videojuego) {
+    videojuegosInscritos.push_back(videojuego);
+}
+
+
+bool Jugador::isEstaIncsritoEn(Videojuego * videojuego) {
+
+    for (int i = 0; i < videojuegosInscritos.size(); i++) {
+        if ( videojuegosInscritos[i]->getCodigo() == videojuego->getCodigo()) {
+            return true;
+        }
+    }
+    return false;
+
+
 }

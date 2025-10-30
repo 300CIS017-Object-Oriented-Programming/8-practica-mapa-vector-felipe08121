@@ -14,10 +14,24 @@ using std::pair;
 
 class Torneo {
 private:
+        unordered_map<string, Jugador * > jugadoresRegistrados;
+        unordered_map<string, Videojuego * > videojuegosDisponibles;
 
 
 
 public:
+//Constructores, destructores e inicializadores:
+      Torneo();
+      void inicializarJugadores();
+      void inicializarVideojuegos();
+      virtual ~Torneo();
+//Metodos:
+    void inscribirJugadorEnVideojuego();
+    void mostrarVideojuegosDeJugador();
+
+    void mostrarJugadoresInscritos();
+    void mostrarVideojuegosInscritos();
+
 };
 
 

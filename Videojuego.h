@@ -12,6 +12,7 @@ using std::cout;
 using std::cin;
 using std::endl;
 using std::string;
+using std::getline;
 
 class Videojuego {
 
@@ -42,7 +43,7 @@ public:
     void setGenero(string Genero);
 
     int getNivelDificultad();
-    void setNivelDificultad( int nivelDificultad);
+    void setNivelDificultad( int nivelDificultad );
 
     //Metodos:
 

@@ -34,6 +34,11 @@ public:
 
      void mostrar();
 
+     //Metodos añadidos:
+
+     void agregarVideojuego(Videojuego * videojuego);
+     bool isEstaIncsritoEn(Videojuego * videojuego);
+
 
 };
 
