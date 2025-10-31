@@ -7,6 +7,7 @@
 
 #include "Videojuego.h"
 #include <vector>
+#include <algorithm>
 
 using std::vector;
 

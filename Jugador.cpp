@@ -58,7 +58,7 @@ void Jugador::mostrar() {
     else {
         for (int i = 0; i < videojuegosInscritos.size(); i++) {
             if ( videojuegosInscritos[i] != NULL) {
-                cout << "--------- Video juego #" << i+1 << " ---------"<< endl;
+                cout << endl <<"--------- Videojuego #" << i+1 << " ---------";
                 videojuegosInscritos[i]->mostrar();
                 promedio += videojuegosInscritos[i]->getNivelDificultad();
                 contador++;

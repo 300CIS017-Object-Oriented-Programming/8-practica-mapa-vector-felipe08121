@@ -29,8 +29,17 @@ public:
     void inscribirJugadorEnVideojuego();
     void mostrarVideojuegosDeJugador();
 
+    void inscribirJugador();
+    void registrarVideojuego();
+
     void mostrarJugadoresInscritos();
     void mostrarVideojuegosInscritos();
+
+//Extras:
+
+    void mostrarRankingJugadores();
+    void actualizarRankingDeJugador();
+    void mostrarJuegosJugadores();
 
 };
 
